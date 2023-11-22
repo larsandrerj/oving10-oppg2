@@ -1,0 +1,12 @@
+@startuml klassediagram
+UI -> Register: new Register()
+UI <-- Register: register object
+UI -> Register: addDish(new Dish(arg))
+Register -> Dish: new Dish(arg)
+Register <-- Dish: dish object
+UI -> Register: addMenu(new Menu(arg))
+Register -> Menu: new Menu(arg)
+Register <-- Menu: menu object
+UI -> Register: addDishToMenu(dish arg, menu arg)
+Register -> Menu: addDish(dish arg)
+@enduml
